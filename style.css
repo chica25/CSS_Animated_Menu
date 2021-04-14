@@ -3,12 +3,21 @@ body {
     margin: 0px;
     font-family: 'gill sans';
     background-color: white;
+    /* background-image: url(bg_img.jpg);
+    background-repeat: no-repeat;
+    background-size: 1920px 1080px; */
+    background: url(bg_img.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .logo-font {
     font-family: 'Pacifico', cursive;
     font-size: 16px;
     color: rgba(195, 68, 122);
+    /* -webkit-text-stroke: 0.01px yellow; */
     justify-content: center;
     text-align: center;
     text-transform: uppercase;
@@ -20,7 +29,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color:#ADD8E6;
+    background-color:white;
 }
 
 .nav-links {
@@ -34,18 +43,26 @@ nav {
 }
 
 .nav-links a {
-    color: rgba(225, 93, 68);
+    color: tomato;
     text-decoration: none;
     letter-spacing: 3px;
-    font-weight: regular;
+    font-weight: medium;
     font-size: 14px;
+    border-radius: 15px;
+    padding: 10px 15px;
+    width: 150px;
 }
 
-.burger {
+.nav-links a:hover {
+    color: white;
+    background-color: rgb(255, 230, 88);
+}
+
+.menu-bar {
     display: none;
 }
 
-.burger div {
+.menu-bar div {
     width: 25px;
     height: 3px;
     border-radius: 8px;
@@ -67,9 +84,9 @@ nav {
     .nav-links {
        position: absolute;
        right: 0px;
-       height: 92vh;
-       top: 8vh;
-       background-color: #ADD8E6;
+       height: 95vh;
+       top: 6vh;
+       background-color: white;
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -80,7 +97,7 @@ nav {
      .nav-links li {
          opacity: 0;
      }
-     .burger {
+     .menu-bar {
          display: block;
      }
  }
@@ -100,14 +117,27 @@ nav {
      }
  }
 
- .toggle .line-1 {
+.toggle .line-1 {
     transform: rotate(-45deg) translate(-5px, 6px);
  }
 
- .toggle .line-2 {
+.toggle .line-2 {
     opacity: 0;
 }
 
 .toggle .line-3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: white;
+    color: rgb(250, 133, 112);
+    font-weight: light;
+    font-size: 12px;
+    text-align: center;
+  }
